@@ -11,7 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree ../../../vendor/assets/admin/js/.
+//= require rails.validations
+//= require rails.validations.simple_form.bootstrap4
+//= require datatables
+//= require_tree .
+
+

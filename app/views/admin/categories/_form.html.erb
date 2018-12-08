@@ -1,0 +1,23 @@
+
+<%= simple_form_for([:admin, @admin_category],validate: true) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :image,as: :file,:input_html => { :class => 'form-control' } %>
+    <% if @admin_category.image.attached?%>
+    <%= image_tag @admin_category.image.variant(resize: "100x100") %>
+    <%= f.input :preview, :as => :hidden, :input_html => { :value => 1  }%>
+    <%end%>
+    <%= f.input :position %>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit,:class => "btn btn-success" %>
+    <%= link_to 'Back', admin_categories_path , :class => "btn btn-info", data: { turbolinks: false } %>
+  </div>
+  <br>
+<% end %>

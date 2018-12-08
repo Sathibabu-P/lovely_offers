@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_category.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_category.description %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @admin_category.position %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_category.status %>
+</p>
+
+<%= link_to 'Edit', edit_admin_category_path(@admin_category), data: { turbolinks: false } %> |
+<%= link_to 'Back', admin_categories_path %>

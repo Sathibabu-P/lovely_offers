@@ -10,18 +10,13 @@
                         <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pages-profile.html" aria-expanded="false">
-                        <i class="mdi mdi-account-network"></i>
-                        <span class="hide-menu">Profile</span>
+                <li class="sidebar-item <%=(controller.controller_name == 'categories') ? 'selected' : ''%>">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link <%=(controller.controller_name == 'categories') ? 'active' : ''%>" href="<%=admin_categories_path%>" aria-expanded="false" data-turbolinks="false">
+                        <i class="mdi mdi-equal-box"></i>
+                        <span class="hide-menu">Categories</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="table-basic.html" aria-expanded="false">
-                        <i class="mdi mdi-border-none"></i>
-                        <span class="hide-menu">Table</span>
-                    </a>
-                </li>
+              
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="icon-material.html" aria-expanded="false">
                         <i class="mdi mdi-face"></i>
