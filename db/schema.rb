@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_08_092251) do
+ActiveRecord::Schema.define(version: 2018_12_09_130208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,10 +39,56 @@ ActiveRecord::Schema.define(version: 2018_12_08_092251) do
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "position"
-    t.boolean "status"
+    t.boolean "status", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_stores", id: false, force: :cascade do |t|
+    t.bigint "category_id"
+    t.bigint "store_id"
+    t.index ["category_id"], name: "index_categories_stores_on_category_id"
+    t.index ["store_id"], name: "index_categories_stores_on_store_id"
+  end
+
+  create_table "coupons", force: :cascade do |t|
+    t.bigint "store_id"
+    t.string "name"
+    t.string "code"
+    t.text "description"
+    t.boolean "status", default: true
+    t.string "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["store_id"], name: "index_coupons_on_store_id"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "sort", default: 0
+    t.boolean "status", default: true
+    t.boolean "topbrand", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.bigint "role_id"
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.string "spassword"
+    t.boolean "status", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

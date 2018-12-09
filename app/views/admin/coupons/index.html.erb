@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<div class="form-actions">
+  <%= link_to 'Back', request.referer , :class => "btn btn-info custom-btn", data: { turbolinks: false } %>
+  <%= link_to 'New Coupon', new_admin_coupon_path , :class => "btn btn-success custom-btn", data: { turbolinks: false } %>
+</div>
+
+<table class="table table-stripped table-hover" id="coupons-table" data-source='<%= admin_coupons_path(format: :json)%>' width="100%" >
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Store</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Actions</th/>
+    </tr>
+  </thead>
+  <tbody>
+  
+  </tbody>
+</table>
+
+<br>
+

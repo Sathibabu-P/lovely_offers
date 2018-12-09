@@ -71,6 +71,9 @@ class Admin::CategoriesController < Admin::BaseController
   def activate
     @admin_category = Category.find(params[:category_id])
     @admin_category.update_attribute(:status, !@admin_category.status)
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 
   private

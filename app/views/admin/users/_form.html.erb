@@ -1,0 +1,19 @@
+
+<%= simple_form_for([:admin, @admin_user],validate: true) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+    <%= f.association :role, as: :select2%>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit,:class => "btn btn-success" %>
+    <%= link_to 'Back', admin_users_path , :class => "btn btn-info", data: { turbolinks: false } %>
+  </div>
+  <br>
+<% end %>

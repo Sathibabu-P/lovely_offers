@@ -5,7 +5,7 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/cms" aria-expanded="false">
                         <i class="mdi mdi-av-timer"></i>
                         <span class="hide-menu">Dashboard</span>
                     </a>
@@ -16,25 +16,37 @@
                         <span class="hide-menu">Categories</span>
                     </a>
                 </li>
-              
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="icon-material.html" aria-expanded="false">
-                        <i class="mdi mdi-face"></i>
-                        <span class="hide-menu">Icon</span>
+                
+                <li class="sidebar-item <%=(controller.controller_name == 'stores') ? 'selected' : ''%>">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link <%=(controller.controller_name == 'stores') ? 'active' : ''%>" href="<%=admin_stores_path%>" aria-expanded="false" data-turbolinks="false">
+                        <i class="mdi mdi-home-map-marker"></i>
+                        <span class="hide-menu">Stores</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="starter-kit.html" aria-expanded="false">
-                        <i class="mdi mdi-file"></i>
-                        <span class="hide-menu">Blank</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="error-404.html" aria-expanded="false">
-                        <i class="mdi mdi-alert-outline"></i>
-                        <span class="hide-menu">404</span>
-                    </a>
-                </li>
+
+                <li class="sidebar-item <%=(controller.controller_name == 'coupons') ? 'selected' : ''%>">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link <%=(controller.controller_name == 'coupons') ? 'active' : ''%>" href="<%=admin_coupons_path%>" aria-expanded="false" data-turbolinks="false">
+                            <i class="mdi mdi-shopping"></i>
+                            <span class="hide-menu">Coupons</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-item <%=(controller.controller_name == 'coupons') ? 'selected' : ''%>">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link <%=(controller.controller_name == 'users') ? 'active' : ''%>" href="<%=admin_users_path%>" aria-expanded="false" data-turbolinks="false">
+                                <i class="mdi mdi-account-multiple"></i>
+                                <span class="hide-menu">Users</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item <%=(controller.controller_name == 'coupons') ? 'selected' : ''%>">
+                                <a class="sidebar-link waves-effect waves-dark sidebar-link <%=(controller.controller_name == 'top_brands') ? 'active' : ''%>" href="<%=admin_top_brands_path%>" aria-expanded="false" data-turbolinks="false">
+                                    <i class="mdi mdi-star"></i>
+                                    <span class="hide-menu">TopBrands</span>
+                                </a>
+                            </li>
+
+
+               
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

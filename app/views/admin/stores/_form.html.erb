@@ -1,14 +1,15 @@
 
-<%= simple_form_for([:admin, @admin_category],validate: true) do |f| %>
+<%= simple_form_for([:admin, @admin_store],validate: true) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
+    <%= f.association :categories, as: :select2,multiple: true%>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :image,as: :file,:input_html => { :class => 'form-control' } %>
-    <% if @admin_category.image.attached?%>
-    <%= image_tag @admin_category.image.variant(resize: "100x100") %>
+    <% if @admin_store.image.attached?%>
+    <%= image_tag @admin_store.image.variant(resize: "100x100") %>
     <%= f.input :preview, :as => :hidden, :input_html => { :value => 1  }%>
     <%end%>
     <%= f.input :status %>
@@ -16,7 +17,7 @@
 
   <div class="form-actions">
     <%= f.button :submit,:class => "btn btn-success" %>
-    <%= link_to 'Back', admin_categories_path , :class => "btn btn-info", data: { turbolinks: false } %>
+    <%= link_to 'Back', admin_stores_path , :class => "btn btn-info", data: { turbolinks: false } %>
   </div>
   <br>
 <% end %>

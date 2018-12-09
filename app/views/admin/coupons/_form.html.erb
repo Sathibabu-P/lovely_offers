@@ -1,0 +1,20 @@
+
+<%= simple_form_for([:admin, @admin_coupon],validate: true) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.association :store, as: :select2%>
+    <%= f.input :name %>
+    <%= f.input :code %>
+    <%= f.input :description %>  
+    <%= f.input :url %>
+    <%= f.input :status %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit,:class => "btn btn-success" %>
+    <%= link_to 'Back', admin_coupons_path , :class => "btn btn-info", data: { turbolinks: false } %>
+  </div>
+  <br>
+<% end %>

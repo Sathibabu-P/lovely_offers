@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
+gem 'jquery-ui-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
@@ -28,7 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem "select2-rails"
+gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
 gem 'jquery-datatables'
 gem 'ajax-datatables-rails'
 gem 'simple_form', '~> 4.1'
@@ -36,6 +38,7 @@ gem 'client_side_validations'
 gem 'client_side_validations-simple_form'
 gem 'image_processing', '~> 1.2'
 gem 'devise', '~> 4.5'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 gem 'active_storage_validations'

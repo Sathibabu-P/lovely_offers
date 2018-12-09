@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @admin_coupon.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @admin_coupon.description %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @admin_coupon.position %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @admin_coupon.status %>
+</p>
+
+<%= link_to 'Edit', edit_admin_coupon_path(@admin_coupon), data: { turbolinks: false } %> |
+<%= link_to 'Back', admin_coupons_path %>

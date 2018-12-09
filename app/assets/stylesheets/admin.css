@@ -12,6 +12,8 @@
  *
  *= require_tree ../../../vendor/assets/admin/css/.
  *= require datatables
+ *= require select2
+ *= require select2-bootstrap
  *= require_self
  *= require_tree .
  */
