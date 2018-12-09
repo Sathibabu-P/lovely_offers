@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  namespace :admin do
+  namespace :admin,:path => "cms" do
     root 'base#index'   
     resources :categories do
       match 'activate' => 'categories#activate', via: [:get]

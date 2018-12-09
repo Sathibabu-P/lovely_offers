@@ -70,9 +70,7 @@ class Admin::CategoriesController < Admin::BaseController
 
   def activate
     @admin_category = Category.find(params[:category_id])
-    @admin_category.status = !@admin_category.status
-    @admin_category.save!
-    redirect_to admin_categories_url,notice: 'Category was successfully updated.'      
+    @admin_category.update_attribute(:status, !@admin_category.status)
   end
 
   private

@@ -41,10 +41,16 @@ class CategoryDatatable < AjaxDatatablesRails::ActiveRecord
   end
 
   def status_show(record)
-    if record.status      
-      link_to('<i class="mdi mdi-eye"></i> '.html_safe,  admin_category_activate_path(record), data: { turbolinks: false },  :class=>'btn btn-success btn-xs')+'&nbsp;'.html_safe
+    if record.status  
+
+      '<label class="switch">  <input type="checkbox" checked class="activate" data-url='"#{admin_category_activate_path(record)}"'>  <span class="slider round"></span></label>'.html_safe
+    
+      
     else
-      link_to('<i class="mdi mdi-eye-off"></i> '.html_safe,  admin_category_activate_path(record), data: { turbolinks: false },  :class=>'btn btn-danger btn-xs')+'&nbsp;'.html_safe
+
+      '<label class="switch">  <input type="checkbox" class="activate" data-url='"#{admin_category_activate_path(record)}"'>  <span class="slider round"></span></label>'.html_safe
+
+      # link_to('<i class="mdi mdi-eye-off"></i> '.html_safe,  admin_category_activate_path(record), data: { turbolinks: false },  :class=>'btn btn-danger btn-xs')+'&nbsp;'.html_safe
     end
   end
 
