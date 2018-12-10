@@ -6,7 +6,7 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :name, as: :select2, collection: Store.where(topbrand: false).all%>  
+    <%= f.input :name, as: :select, collection: Store.where(topbrand: false).all,:input_html => { :class => 'select2' }%>  
   </div>
 
   <div class="form-actions">

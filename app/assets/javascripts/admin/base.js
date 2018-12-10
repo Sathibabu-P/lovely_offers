@@ -1,4 +1,7 @@
 $(document).on("turbolinks:load", function() {
+
+  $(".select2").select2();
+
     $(document).on('click', '.activate', function(){
       var url = $(this).data('url');
       return $.ajax({
@@ -12,5 +15,8 @@ $(document).on("turbolinks:load", function() {
         }
       });    
     });  
+
+
+
   });
 

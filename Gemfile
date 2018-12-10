@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# ruby '2.5.1'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -26,7 +26,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem "select2-rails"
-gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
 gem 'jquery-datatables'
 gem 'ajax-datatables-rails'
 gem 'simple_form', '~> 4.1'

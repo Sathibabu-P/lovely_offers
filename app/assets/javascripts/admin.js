@@ -14,12 +14,12 @@
 //= require jquery.turbolinks
 //= require rails-ujs
 //= require activestorage
-//= require select2
 //= require turbolinks
 //= require_tree ../../../vendor/assets/admin/js/.
 //= require rails.validations
 //= require rails.validations.simple_form.bootstrap4
 //= require datatables
+//= require select2
 //= require_tree .
 
 

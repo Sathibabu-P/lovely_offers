@@ -4,7 +4,7 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.association :categories, as: :select2,multiple: true%>
+    <%= f.association :categories, as: :select,multiple: true,:input_html => { :class => 'select2' }%>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :image,as: :file,:input_html => { :class => 'form-control' } %>
