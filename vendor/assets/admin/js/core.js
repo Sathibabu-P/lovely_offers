@@ -1,6 +1,7 @@
 /* global Symbol */
 // Defining this global in .eslintrc.json would create a danger of using the global
 // unguarded in another place, it seems safer to define global only for this module
+"use strict";
 
 define( [
 	"./var/arr",
@@ -24,7 +25,6 @@ define( [
 	class2type, toString, hasOwn, fnToString, ObjectFunctionString,
 	support, isFunction, isWindow, DOMEval, toType ) {
 
-"use strict";
 
 var
 	version = "3.3.1",
