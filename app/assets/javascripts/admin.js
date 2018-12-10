@@ -15,7 +15,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require select2
-//= require select2_simple_form
 //= require turbolinks
 //= require_tree ../../../vendor/assets/admin/js/.
 //= require rails.validations
