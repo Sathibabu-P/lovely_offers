@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Lovely Offers</title>
+
+
+  <%= stylesheet_link_tag  'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <style media="screen">
+    /*! CSS Used from: http://preview.desideals4u.com/best-buy/assets/css/style.css */
+    /*! @import http://preview.desideals4u.com/best-buy/assets/css/bootstrap.min.css */
+    a{background-color:transparent;}
+    a:active,a:hover{outline:0;}
+    @media print{
+      *,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important;}
+      a,a:visited{text-decoration:underline;}
+      a[href]:after{content:" (" attr(href) ")";}
+      a[href^="#"]:after{content:"";}
+    }
+    *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+    :after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+    a{color:#337ab7;text-decoration:none;}
+    a:focus,a:hover{color:#23527c;text-decoration:underline;}
+    a:focus{outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+    /*! end @import */
+    /*! @import http://preview.desideals4u.com/best-buy/assets/plugins/megamenu/css/hover-dropdown-menu.css */
+    a,a:hover{-webkit-transition:all 350ms ease-in-out 0s;-moz-transition:all 350ms ease-in-out 0s;-ms-transition:all 350ms ease-in-out 0s;-o-transition:all 350ms ease-in-out 0s;transition:all 350ms ease-in-out 0s;opacity:1;}
+    /*! end @import */
+    a,a:focus,a:hover,a:visited{text-decoration:none;color:inherit;}
+    a{color:inherit;}
+    a{cursor:pointer;-webkit-transition:all .45s ease-in-out;-moz-transition:all .45s ease-in-out;-o-transition:all .45s ease-in-out;-ms-transition:all .45s ease-in-out;transition:all .45s ease-in-out;}
+    a:focus,a:hover,a:visited{outline:0;-webkit-transition:all .45s ease-in-out;-moz-transition:all .45s ease-in-out;-o-transition:all .45s ease-in-out;-ms-transition:all .45s ease-in-out;transition:all .45s ease-in-out;}
+    span{font-size:16px;}
+    .itg-btn.box-btn{display:inline-block;}
+    .itg-btn{position:relative;color:#fff;}
+    span{font-size:inherit;}
+    .itg-btn{background-color:#000;text-transform:uppercase;z-index:1;border:0;}
+    .itg-btn.box-btn span,.itg-btn.box-btn span:after{position:absolute;top:0;-webkit-transition:all .45s ease-in-out;-moz-transition:all .45s ease-in-out;-ms-transition:all .45s ease-in-out;}
+    .itg-btn.box-btn.black{color:#000;border:1px solid #f2f2f2;}
+    .itg-btn.box-btn{background-color:transparent;color:inherit;font-size:14px;font-weight:700;overflow:hidden;text-align:center;}
+    .itg-btn.box-btn:hover span{left:-50%;opacity:1;color:#fff;}
+    .itg-btn.box-btn span:after{width:0;height:0;border-bottom:60px solid;border-right:40px solid transparent;content:"";-o-transition:all .45s ease-in-out;transition:all .45s ease-in-out;left:100%;}
+    .itg-btn.box-btn span{background-color:#dc3545;opacity:1;left:0;text-align:center;width:100%;height:100%;color:#fff;padding:8px 0;-o-transition:all .45s ease-in-out;transition:all .45s ease-in-out;line-height:1.6em;}
+    /*! CSS Used from: http://preview.desideals4u.com/best-buy/assets/css/color.css */
+    .itg-btn.box-btn:hover span{background-color:#dc3545;}
+    .itg-btn.box-btn span:after{border-bottom:60px solid #dc3545;}
+
+    .b-sha-theme{
+      box-shadow: 0 4px 6px rgba(50,50,93,0.11), 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    @media (max-width: 770px) {
+      .w-100-sm-down{
+        width: 100% !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <%= yield  %>
+
+  <%= javascript_include_tag 'home', 'data-turbolinks-track': 'reload' %>
+
+</body>
+</html>

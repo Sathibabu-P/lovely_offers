@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  
- 
+  root :to => "home#index"
+
   namespace :admin,:path => "cms" do
-    root 'base#index'   
-    resources :top_brands 
+    root 'base#index'
+    resources :top_brands
     match 'top_brands/set_order' => 'top_brands#set_order', via: [:post]
     resources :categories do
       match 'activate' => 'categories#activate', via: [:get]
